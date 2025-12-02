@@ -6,3 +6,11 @@ Encoding: UTF-8
 Suggests: 
     styler,
     usethis
+Imports: 
+    dplyr,
+    fs,
+    here,
+    readxl,
+    snakecase,
+    stringr,
+    tidyr
