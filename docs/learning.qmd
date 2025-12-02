@@ -8,6 +8,8 @@ format: html
 
 ```{r setup}
 source(here::here("data-raw", "nmr-omics.R"))
+source(here::here("R","functions.r"))
+load_description_packages()
 
 ```
 
