@@ -4,6 +4,7 @@ Type: Project
 Version: 0.0.1
 Encoding: UTF-8
 Suggests: 
+    gitcreds,
     styler,
     usethis
 Imports: 
