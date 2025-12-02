@@ -7,11 +7,9 @@ format: html
 ## Setup chunk
 
 ```{r setup}
-source(here::here("data-raw", "nmr-omics.R"))
+source(here::here("data-raw", "nmr-omics.R"), print.eval = FALSE)
 source(here::here("R/functions.R"))
 load_description_packages()
 tar_config_set(store = here::here("_targets"))
 lipidomics <- tar_read(lipidomics)
-
-
 ```
