@@ -1,0 +1,18 @@
+---
+title: "Draft Quarto document"
+author: "Your Name"
+format: html
+---
+
+## Setup chunk
+
+```{r setup}
+source(here::here("data-raw", "nmr-omics.R"))
+
+
+
+```
+
+```{r}
+readr::read_csv(here::here("data/lipidomics.csv"))
+```
