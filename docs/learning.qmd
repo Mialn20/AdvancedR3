@@ -16,3 +16,7 @@ load_description_packages()
 ```{r}
 readr::read_csv(here::here("data/lipidomics.csv"))
 ```
+
+```{r}
+usethis::browse_github()
+```
