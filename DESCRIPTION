@@ -11,10 +11,14 @@ Imports:
     dplyr,
     fs,
     here,
+    quarto,
     readxl,
     snakecase,
     stringr,
+    tarchetypes,
     targets,
     tidyr
 URL: https://github.com/Mialn20/AdvancedR3
 BugReports: https://github.com/Mialn20/AdvancedR3/issues
+Depends: 
+    tidyverse

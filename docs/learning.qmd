@@ -8,18 +8,10 @@ format: html
 
 ```{r setup}
 source(here::here("data-raw", "nmr-omics.R"))
-source(here::here("R","functions.r"))
+source(here::here("R/functions.R"))
 load_description_packages()
-```
+tar_config_set(store = here::here("_targets"))
+lipidomics <- tar_read(lipidomics)
 
-```{r}
-readr::read_csv(here::here("data/lipidomics.csv"))
-```
 
-```{r}
-usethis::browse_github()
-```
-
-```{r}
-targets::tar_read()
 ```
