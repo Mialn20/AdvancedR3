@@ -10,7 +10,6 @@ format: html
 source(here::here("data-raw", "nmr-omics.R"))
 source(here::here("R","functions.r"))
 load_description_packages()
-
 ```
 
 ```{r}
@@ -19,4 +18,8 @@ readr::read_csv(here::here("data/lipidomics.csv"))
 
 ```{r}
 usethis::browse_github()
+```
+
+```{r}
+
 ```
