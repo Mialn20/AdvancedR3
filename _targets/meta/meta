@@ -1,0 +1,4 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+file|stem|b098d86261c1ba20|09442fac263aded2|2c530c1562a7fbd1|1735323524|data/lipidomics.csv|t20424.4357397589s|s24266b|24266|file|local|vector|||0||
+lipidomics|stem|77d89362501c2280|0adf46d83f39a429|1c8bec5fb44f50b7|-1498393010||t20424.5716836987s|s4883b|4883|rds|local|vector|||0.396||
+load_description_packages|function|78c54015c70052ed
