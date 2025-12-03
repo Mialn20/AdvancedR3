@@ -9,7 +9,7 @@ library(tarchetypes) # Load other packages as needed.
 
 # Set target options:
 tar_option_set(
-   packages = c("dplyr"), # Packages that your targets need for their tasks.
+  # packages = c("dplyr"), # Packages that your targets need for their tasks.
   #format = "qs" # Optionally set the default storage format. qs is fast.
   #
   # Pipelines that take a long time to run may benefit from

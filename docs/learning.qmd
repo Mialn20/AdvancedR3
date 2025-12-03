@@ -17,5 +17,8 @@ lipidomics <- tar_read(lipidomics)
 ## Making a table
 
 ```{r}
-tar_read(descriptive_table)
+tar_read(descriptive_table) |>
+  knitr::kable(
+    caption = "The mean and standard deviation of metabolites in the lipidomics dataset."
+  )
 ```

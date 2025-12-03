@@ -4,10 +4,10 @@ test|stem||3b1aae8851e2f2a8|34a17df7f5a74197|1839796588||t20425.3086066617s||0|r
 lipidprocessesF|function|8d8210c5d8b0960f
 descriptiveFunction|function|57efb9f0b24a59ce
 lipidomics|stem|77d89362501c2280|0adf46d83f39a429|1c8bec5fb44f50b7|-1498393010||t20425.3470604046s|s4883b|4883|rds|local|vector|||0.086||
-descriptive_table|stem|f0e36e3529e085a8|34e33bc9eaef7fce|f28ea96bd9c98299|-1771508806||t20425.3480738831s|s418b|418|rds|local|vector|||0.021||
-file|stem|b098d86261c1ba20|09442fac263aded2|2c530c1562a7fbd1|1735323524|data/lipidomics.csv|t20425.3570036634s|s24266b|24266|file|local|vector|||0||
 pipeline_visualization|function|75087115a1e42568
 pipeline_plot|stem||1c03b79fe939a937|5f7aab74c58fe5bb|-1108346020||t20425.3580599711s||0|rds|local|vector|||0.015||target pipeline_plot attempted to run targets::tar_visnetwork() to during a pipeline, which is unsupported except when format is 'file' and repository is 'local', or if you are reading from a data store that does not belong to the current pipeline. This is because functions like tar_visnetwork() attempt to access or modify the local data store, which may not exist or be properly synced in certain situations. Also, please be aware that some functions like tar_make() and tar_destroy() should never run inside a target. Please find a different workaround for your use case.
+file|stem|b098d86261c1ba20|09442fac263aded2|2c530c1562a7fbd1|1735323524|data/lipidomics.csv|t20425.3647373639s|s24266b|24266|file|local|vector|||0||
+descriptive_table|stem|f0e36e3529e085a8|34e33bc9eaef7fce|6dc16a5785833d69|-1771508806||t20425.3714255282s|s418b|418|rds|local|vector|||0.012||
 load_description_packages|function|78c54015c70052ed
-create_table_descriptive_stats|function|57efb9f0b24a59ce
-quarto_doc|stem|a0fa11f46dc89a52|ddd2a8c16269aa02|5c4062fc091a9e4a|1582462002|docs/learning.html*docs/learning.qmd|t20425.3596483255s|s23752b|23752|file|local|vector|||6.472||
+create_table_descriptive_stats|function|880ad2acb8799188
+quarto_doc|stem|e19b407e51d8b6fb|ddd2a8c16269aa02|5c4062fc091a9e4a|1582462002|docs/learning.html*docs/learning.qmd|t20425.3792392935s|s25449b|25449|file|local|vector|||6.369||
