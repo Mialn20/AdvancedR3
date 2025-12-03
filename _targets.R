@@ -62,5 +62,9 @@ list(
   tar_quarto(
     name = quarto_doc,
     path = "docs/learning.qmd"
+  ),
+  tar_target(
+    name = lipidprocesses,
+    command = lipidprocessesF(lipidomics)
   )
 )

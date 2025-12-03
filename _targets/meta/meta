@@ -1,5 +1,8 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
 lipidomics|stem|77d89362501c2280|0adf46d83f39a429|1c8bec5fb44f50b7|-1498393010||t20424.5716836987s|s4883b|4883|rds|local|vector|||0.396||
+lipidprocesses|stem|2bea196aa6118ccd|d1a8950685558f47|d6e383ab4b06c618|-396792965||t20425.3029782225s|s111b|111|rds|local|vector|||0||
+test|stem||3b1aae8851e2f2a8|34a17df7f5a74197|1839796588||t20425.3086066617s||0|rds|local|vector|||0.003||$ operator is invalid for atomic vectors
+lipidprocessesF|function|8d8210c5d8b0960f
 load_description_packages|function|78c54015c70052ed
-file|stem|b098d86261c1ba20|09442fac263aded2|2c530c1562a7fbd1|1735323524|data/lipidomics.csv|t20424.6209008027s|s24266b|24266|file|local|vector|||0||
-quarto_doc|stem|0b2b5d9e39013043|7d7691b957727962|668f63703d1190a7|1582462002|docs/learning.html*docs/learning.qmd|t20424.6217358619s|s22366b|22366|file|local|vector|||4.449||
+file|stem|b098d86261c1ba20|09442fac263aded2|2c530c1562a7fbd1|1735323524|data/lipidomics.csv|t20425.3088310885s|s24266b|24266|file|local|vector|||0||
+quarto_doc|stem|fa7abfcb50752a8b|318e9e2cc98cc870|8346446a189471c6|1582462002|docs/learning.html*docs/learning.qmd|t20425.3090693181s|s22581b|22581|file|local|vector|||3.006||

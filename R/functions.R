@@ -33,3 +33,6 @@ load_description_packages <- function(desc_path = here::here("DESCRIPTION")) {
   }
 }
 
+lipidprocessesF <- function(x){
+  return(x$gender)
+}
