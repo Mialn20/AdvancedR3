@@ -11,6 +11,7 @@ source(here::here("data-raw", "nmr-omics.R"), print.eval = FALSE)
 source(here::here("R/functions.R"))
 load_description_packages()
 tar_config_set(store = here::here("_targets"))
+lipidomics <- tar_read(lipidomics)
 ```
 
 ## Making a table
@@ -33,4 +34,27 @@ tar_read(plot_distribution)
 tar_read(processedList2)
 tar_read(merged)
 tar_read(merged)
+
+```
+
+## 
+
+19.6
+
+What is the estimated relationship of each metabolite with type 1
+diabetes (T1D) compared to the controls?
+
+What is the estimated relationship after considering the influence of
+age and gender?
+
+How do the estimated relationships compare between metabolites?
+
+```{r}
+
+
+lipidomics |>
+  filter(metabolite == "Cholesterol") |>
+  preprocess() |>
+  fit_model(class ~ value)
+
 ```

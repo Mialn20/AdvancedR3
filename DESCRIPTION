@@ -8,6 +8,7 @@ Suggests:
     styler,
     usethis
 Imports: 
+    broom,
     dplyr,
     fs,
     ggplot2,

@@ -57,7 +57,8 @@ list(
   ),
   tar_target(
     name = lipidomics,
-    command = readr::read_csv(file, show_col_types = FALSE)
+    command = readr::read_csv(file, show_col_types = FALSE) |>
+      clean()
   ),
   tar_quarto(
     name = quarto_doc,
@@ -70,26 +71,6 @@ list(
   tar_target(
     name = plot_distribution,
     command = create_plot_distributions(lipidomics)
-  ),
-
-  tar_target(name = objList,
-    command = list(test1 = c(1,2,3), test2=c(4,5,6)),
-    iteration = "list"
-  ),
-  tar_target(
-    name = processedList,
-    ListProcess(objList),
-    pattern = map(objList)
-  ),
-  tar_target(
-    name = processedList2,
-    ListProcess(processedList),
-    pattern = map(processedList)
-  ),
-  tar_target(
-    name = merged,
-    sum(processedList2)
   )
-
 )
 

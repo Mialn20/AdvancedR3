@@ -59,3 +59,54 @@ ListProcess <- function(x) {
   result <- sum(x)
   return(result)
 }
+
+
+#' Do some cleaning to fix issues in the data.
+#'
+#' @param data
+#'
+#' @returns clean data frame
+clean <- function(data) {
+  data |>
+    dplyr::group_by(dplyr::pick(-value)) |>
+    dplyr::summarise(value = mean(value), .groups = "keep") |>
+    dplyr::ungroup()
+}
+
+#' Fix data to process it for model fitting.
+#'
+#' @param data The lipidomics data.
+#'
+#' @returns A data frame.
+#'
+preprocess <- function(data) {
+  data |>
+    dplyr::mutate(
+      class = as.factor(class),
+      value = scale(value)
+    )
+}
+
+
+#' fit model
+#'
+#' @param data
+#' @param model_formula
+#'
+#' @returns
+#' @export
+#'
+#' @examples
+fit_model <- function(data,model_formula){
+  glm(
+    formula = model_formula,
+    data = data,
+    family = binomial
+  ) |>
+    broom::tidy(exponentiate = TRUE) |>
+    dplyr::mutate(
+      metabolite = unique(data$metabolite),
+      model = format(model_formula),
+      .before = tidyselect::everything()
+    )
+}
