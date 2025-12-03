@@ -110,3 +110,18 @@ fit_model <- function(data,model_formula){
       .before = tidyselect::everything()
     )
 }
+
+#' Title
+#'
+#' @param data
+#'
+#' @returns
+#' @export
+#'
+#' @examples
+create_model_results <- function(data){
+  data |>
+    dplyr::filter(metabolite == "Cholesterol") |>
+    preprocess() |>
+    fit_model(class ~ value)
+}
