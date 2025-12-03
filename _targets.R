@@ -66,5 +66,30 @@ list(
   tar_target(
     name = descriptive_table,
     command = create_table_descriptive_stats(lipidomics)
+  ),
+  tar_target(
+    name = plot_distribution,
+    command = create_plot_distributions(lipidomics)
+  ),
+
+  tar_target(name = objList,
+    command = list(test1 = c(1,2,3), test2=c(4,5,6)),
+    iteration = "list"
+  ),
+  tar_target(
+    name = processedList,
+    ListProcess(objList),
+    pattern = map(objList)
+  ),
+  tar_target(
+    name = processedList2,
+    ListProcess(processedList),
+    pattern = map(processedList)
+  ),
+  tar_target(
+    name = merged,
+    sum(processedList2)
   )
+
 )
+

@@ -43,3 +43,19 @@ create_table_descriptive_stats <- function(x){
     dplyr::select(Metabolite = metabolite, `Mean SD` = MeanSD)
   return(x1)
 }
+
+create_plot_distributions <- function(data) {
+  data |>
+  ggplot2::ggplot(ggplot2::aes(x = value)) +
+    ggplot2::geom_histogram() +
+    ggplot2::facet_wrap(ggplot2::vars(metabolite), scales = "free") +
+    ggplot2::theme_minimal()
+}
+
+
+
+ListProcess <- function(x) {
+  # Example processing: calculate the sum of each vector
+  result <- sum(x)
+  return(result)
+}

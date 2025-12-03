@@ -10,6 +10,7 @@ Suggests:
 Imports: 
     dplyr,
     fs,
+    ggplot2,
     glue,
     here,
     htmlwidgets,
