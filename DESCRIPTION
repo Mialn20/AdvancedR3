@@ -10,14 +10,19 @@ Suggests:
 Imports: 
     dplyr,
     fs,
+    glue,
     here,
+    htmlwidgets,
+    purrr,
     quarto,
     readxl,
     snakecase,
     stringr,
     tarchetypes,
     targets,
-    tidyr
+    tidyr,
+    visNetwork,
+    webshot2
 URL: https://github.com/Mialn20/AdvancedR3
 BugReports: https://github.com/Mialn20/AdvancedR3/issues
 Depends: 

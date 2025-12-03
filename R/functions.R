@@ -33,6 +33,13 @@ load_description_packages <- function(desc_path = here::here("DESCRIPTION")) {
   }
 }
 
-lipidprocessesF <- function(x){
-  return(x$gender)
+
+create_table_descriptive_stats <- function(x){
+  x1 <- x |>
+    group_by(metabolite) |>
+    summarise(across(value, list(mean = mean, sd = sd))) |>
+    mutate(across(where(is.numeric), \(x) round(x, digits = 1))) |>
+    mutate(MeanSD = glue::glue("{value_mean} ({value_sd})")) |>
+    select(Metabolite = metabolite, `Mean SD` = MeanSD)
+  return(x1)
 }

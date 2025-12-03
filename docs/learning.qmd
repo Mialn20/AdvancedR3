@@ -12,5 +12,10 @@ source(here::here("R/functions.R"))
 load_description_packages()
 tar_config_set(store = here::here("_targets"))
 lipidomics <- tar_read(lipidomics)
-lipidprocesses <- tar_read(lipidprocesses)
+```
+
+## Making a table
+
+```{r}
+tar_read(descriptive_table)
 ```
