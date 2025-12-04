@@ -87,7 +87,6 @@ preprocess <- function(data) {
     )
 }
 
-
 #' fit model
 #'
 #' @param data
@@ -121,7 +120,27 @@ fit_model <- function(data,model_formula){
 #' @examples
 create_model_results <- function(data){
   data |>
-    dplyr::filter(metabolite == "Cholesterol") |>
-    preprocess() |>
-    fit_model(class ~ value)
+    dplyr::group_split(metabolite) |>
+    purrr::map(preprocess) |>
+    purrr::map(fit_all_models) |>
+    purrr::list_rbind()
 }
+
+
+#' fit_all_models function to a given dataframe
+#'
+#' @param data
+#'
+#' @returns
+#' @export
+#'
+#' @examples
+fit_all_models <- function(data) {
+  list(
+    class ~ value,
+    class ~ value + gender + age
+  ) |>
+    purrr::map(\(model) fit_model(data, model = model)) |>
+    purrr::list_rbind()
+}
+

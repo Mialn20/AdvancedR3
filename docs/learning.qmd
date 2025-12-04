@@ -31,9 +31,7 @@ tar_read(plot_distribution)
 
 ## 
 
-19.6
-
-What is the estimated relationship of each metabolite with type 1
+19.6 What is the estimated relationship of each metabolite with type 1
 diabetes (T1D) compared to the controls?
 
 What is the estimated relationship after considering the influence of
@@ -43,6 +41,13 @@ How do the estimated relationships compare between metabolites?
 
 ```{r}
 
-tar_read(ModelResults)
+```
 
+## Running multiple models
+
+```{r}
+tar_read(all_models_results) |> 
+  knitr::kable(
+    caption = "Results of the data analysis fitting multiple models to each metabolite."
+  )
 ```
