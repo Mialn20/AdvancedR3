@@ -51,3 +51,33 @@ tar_read(all_models_results) |>
     caption = "Results of the data analysis fitting multiple models to each metabolite."
   )
 ```
+
+# plot model results
+
+```{r}
+
+
+
+
+tar_read(all_models_results) |> 
+  dplyr::filter(term == "value",std.error <= 2, estimate < 5) |>
+  dplyr::select(metabolite, model, estimate, std.error) |> 
+  ggplot2::ggplot(ggplot2::aes(x = estimate, y = metabolite,xmin=estimate - std.error, xmax = estimate + std.error))+
+  ggplot2::geom_pointrange()+
+  geom_vline(xintercept = 1, linetype = "dashed",color="red")+
+  ggplot2::facet_grid(cols = vars(model))
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+create_plot_model_results()
+
+```
