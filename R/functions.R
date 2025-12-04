@@ -144,3 +144,30 @@ fit_all_models <- function(data) {
     purrr::list_rbind()
 }
 
+
+
+#' Making a plot function
+#'
+#' @param results
+#'
+#' @returns
+#' @export
+#'
+#' @examples
+create_plot_model_results <- function(results){
+  results |>
+    dplyr::filter(term == "value",std.error <= 2, estimate < 5) |>
+    dplyr::select(metabolite, model, estimate, std.error,p.value) |>
+    ggplot2::ggplot(ggplot2::aes(x = estimate, y = metabolite,xmin=estimate - std.error, xmax = estimate + std.error))+
+    ggplot2::geom_pointrange()+
+    ggplot2::geom_vline(xintercept = 1, linetype = "dashed",color="red")+
+    ggplot2::facet_grid(cols = ggplot2::vars(model))+
+    ggplot2::theme_minimal()+
+    ggplot2::labs(x="odds ratio", y="Metabolite")+
+    ggplot2::geom_text(ggplot2::aes(label = paste("p.value: ",round(p.value,5),"(don't look here, Luke)"), nudge_y = 0.2))
+}
+
+
+
+
+

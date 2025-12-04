@@ -21,14 +21,16 @@ ModelResults|stem|4aa783e37ae40394|76ca4d86f326324d|3ba051b8bc6e84f9|1802339420|
 descriptive_table|stem|299871b8ccc70b4d|34e33bc9eaef7fce|5c22136f94250030|-1771508806||t20426.414328508s|s416b|416|rds|local|vector|||0.01||
 plot_distribution|stem|9b701b7288332e7b|01ce942be37808d6|cb9371e013b1d316|1923175936||t20426.4143344725s|s270492b|270492|rds|local|vector|||0.433||
 all_models_results|stem|8777a2042c62a691|8dc321a94f7f9089|608ff3e3f2848d34|-1639801664||t20426.4174023625s|s2769b|2769|rds|local|vector|||0.236|glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: algorithm did not converge. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: algorithm did not converge. glm.fit: fitted probabilities numerically 0 or 1 occurred. glm.fit: fitted probabilities numerically 0 or 1 occurred|
-file|stem|b098d86261c1ba20|09442fac263aded2|2c530c1562a7fbd1|1735323524|data/lipidomics.csv|t20426.4192177759s|s24266b|24266|file|local|vector|||0||
 ListProcess|function|d163e1caeb47116d
 fit_model|function|751c494c56bee49a
 preprocess|function|27efdd529f320467
 clean|function|ce06151f5b2133d2
+create_plot_model_results|function|449e370bb767742c
 load_description_packages|function|78c54015c70052ed
 create_table_descriptive_stats|function|880ad2acb8799188
 create_plot_distributions|function|b411ca55e4bdd968
 fit_all_models|function|75f4dc10b152d589
 create_model_results|function|89cd3b88970caa90
-quarto_doc|stem|d54625154529de4e|e5f21cc2d2235695|d9255602a9a34bca|1582462002|docs/learning.html*docs/learning.qmd|t20426.4269875722s|s55376b|55376|file|local|vector|||7.981||
+file|stem|b098d86261c1ba20|09442fac263aded2|2c530c1562a7fbd1|1735323524|data/lipidomics.csv|t20426.5173166141s|s24266b|24266|file|local|vector|||0||
+plot_model_results|stem|58be8f6a873a81cf|6342e49c095518e2|a536a524bd163687|384392714||t20426.5177887779s|s276391b|276391|rds|local|vector|||0.23||
+quarto_doc|stem|8e48a4279cba6a10|0eb21594247b30be|01dcc8113c2aeec5|1582462002|docs/learning.html*docs/learning.qmd|t20426.5178466878s|s57648b|57648|file|local|vector|||4.907||
